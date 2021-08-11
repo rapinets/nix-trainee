@@ -1,0 +1,12 @@
+{
+    "name": "rapinets/nix-trainee",
+    "description": "Trainee",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.3"
+    }
+}

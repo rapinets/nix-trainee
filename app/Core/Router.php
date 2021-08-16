@@ -2,7 +2,7 @@
 
 namespace App\Core;
 
-use App\Routes\Web;
+use App\Core\View;
 
 class Router
 {
@@ -45,11 +45,13 @@ class Router
                     $controller = new $path($this->params);
                     $controller->$action();
                 } else {
-                    echo 'not found' . $action;
+                    View::errorCode(404);
                 }
             } else {
-                echo 'not found' . $path;
+                View::errorCode(404);
             }
+        } else {
+            View::errorCode(404);
         }
     }
 

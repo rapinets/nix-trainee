@@ -9,7 +9,10 @@ class TestController extends Controller
 {
     public function indexAction()
     {
-        //$this->view->path = 'test/index';
-        $this->view->render('Test');
+        $data = [
+            'name' => 'Vasil',
+            'age' => '36',
+        ];
+        $this->view->render('Test', $data);
     }
 }

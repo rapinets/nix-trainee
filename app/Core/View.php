@@ -15,8 +15,9 @@ class View
         
     }
 
-    public function render($title, $date = [])
+    public function render($title, $data = [])
     {
+        extract($data);
         if (file_exists('app/views/' . $this->path . '.php')){
             ob_start();
             require 'app/views/' . $this->path . '.php';
@@ -27,4 +28,18 @@ class View
             echo 'don\'t has a view ' . $this->path;
         }
     }
+
+    public function redirect($url)
+    {
+        header('location: ' . $url);
+        exit;
+    }
+
+    public static function errorCode($code)
+    {
+        http_response_code($code);
+        require 'app/views/errors' . $code . '.php';
+        exit;
+    }
+    
 }

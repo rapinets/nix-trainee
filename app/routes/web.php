@@ -7,5 +7,9 @@ return [
             'controller' => 'test',
             'action' => 'index',
         ],
+        'post' => [
+            'controller' => 'post',
+            'action' => 'index',
+        ],
     ];
 

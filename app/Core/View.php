@@ -18,6 +18,7 @@ class View
     public function render($title, $data = [])
     {
         extract($data);
+        
         if (file_exists('app/views/' . $this->path . '.php')){
             ob_start();
             require 'app/views/' . $this->path . '.php';
@@ -38,7 +39,7 @@ class View
     public static function errorCode($code)
     {
         http_response_code($code);
-        require 'app/views/errors' . $code . '.php';
+        require 'app/views/errors/' . $code . '.php';
         exit;
     }
     

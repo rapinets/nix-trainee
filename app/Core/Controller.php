@@ -15,4 +15,9 @@ class Controller
         $this->view = new View($route);
     }
     
+    public function getModel($name)
+    {
+        $name = 'App\\Models\\' . ucfirst($name);
+        return new $name();
+    }
 }

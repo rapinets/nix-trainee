@@ -23,10 +23,10 @@ class Model implements DbModelInterface
         return $this->data;
     }
 
-    public function getTableName(): string
+    /*public function getTableName(): string
     {
         return $this->table_name;
-    }
+    }*/
 
     public function getPrimaryKeyName(): string
     {

@@ -4,7 +4,7 @@ namespace App\Core;
 
 interface DbModelInterface
 {
-    public function getTableName(): string;
+    //public function getTableName(): string;
 
     public function getPrimaryKeyName(): string;
 
